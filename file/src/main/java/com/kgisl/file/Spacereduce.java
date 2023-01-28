@@ -14,7 +14,7 @@ public class Spacereduce {
 
   
     public static void main(String[] args) throws IOException, CsvException {
-        CSVReader reader = new CSVReader(new FileReader("D:\\praveen\\java\\file\\src\\main\\resources\\worldcities.csv"));
+        CSVReader reader = new CSVReader(new FileReader("F:\\filehandling-main\\file\\src\\main\\resources\\worldcities.csv"));
         List<String[]> allRows = reader.readAll();
         ArrayList<String>citynames=new  ArrayList<String>();
         ArrayList<String>citys=new  ArrayList<String>();

@@ -20,13 +20,13 @@ public class App
          Spacereduce op=new Spacereduce();
        String line="";
        String splitBy=",";
-       List<Model> modelList = new ArrayList<Model>();
+       List<CityModel> modelList = new ArrayList<CityModel>();
        try{
         BufferedReader br=new BufferedReader(new FileReader("D:\\praveen\\java\\file\\src\\main\\resources\\worldcities.csv"));
         while((line=br.readLine())!=null){
             String[]model=line.split(splitBy);
             // System.out.println(model[0]+""+model[1]);
-            modelList.add(new Model(model[0], model[1], model[2], model[3], model[4], model[5], model[6], model[7], model[8], model[9], model[10]));
+            modelList.add(new CityModel(model[0], model[1], model[2], model[3], model[4], model[5], model[6], model[7], model[8], model[9], model[10]));
         }
        }catch(IOException e){
         e.printStackTrace();
@@ -37,11 +37,11 @@ public class App
 // System.out.println(modelList);
       
         Map mp=new HashMap<String,Integer>();
-        for (Model m:modelList) {
+        for (CityModel m:modelList) {
             String key=m.getCountry();
            int count=0;
             // List li=new ArrayList<String>();
-            for (Model model : modelList) {
+            for (CityModel model : modelList) {
                 while(key.equals(model.getCountry())){
                     // li.add(model.getCity());
                     count=count+1;

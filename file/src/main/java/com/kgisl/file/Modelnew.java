@@ -10,7 +10,7 @@ public class Modelnew {
     private String iso3;
     private String admin_name;
     private String capital;
-    private Integer population;
+    private long population;
     private String id;
     public String getCity() {
         return city;
@@ -66,10 +66,10 @@ public class Modelnew {
     public void setCapital(String capital) {
         this.capital = capital;
     }
-    public Integer getPopulation() {
+    public long getPopulation() {
         return population;
     }
-    public void setPopulation(Integer population) {
+    public void setPopulation(long population) {
         this.population = population;
     }
     public String getId() {
@@ -78,14 +78,8 @@ public class Modelnew {
     public void setId(String id) {
         this.id = id;
     }
-    @Override
-    public String toString() {
-        return "Modelnew [city=" + city + ", city_ascii=" + city_ascii + ", lat=" + lat + ", lng=" + lng + ", country="
-                + country + ", iso2=" + iso2 + ", iso3=" + iso3 + ", admin_name=" + admin_name + ", capital=" + capital
-                + ", population=" + population + ", id=" + id + "]";
-    }
     public Modelnew(String city, String city_ascii, String lat, String lng, String country, String iso2, String iso3,
-            String admin_name, String capital, String model, String id) {
+            String admin_name, String capital, long population, String id) {
         this.city = city;
         this.city_ascii = city_ascii;
         this.lat = lat;
@@ -98,6 +92,12 @@ public class Modelnew {
         this.population = population;
         this.id = id;
     }
-   
+    @Override
+    public String toString() {
+        return "Modelnew [city=" + city + ", city_ascii=" + city_ascii + ", lat=" + lat + ", lng=" + lng + ", country="
+                + country + ", iso2=" + iso2 + ", iso3=" + iso3 + ", admin_name=" + admin_name + ", capital=" + capital
+                + ", population=" + population + ", id=" + id + "]";
+    }
+
     
 }
